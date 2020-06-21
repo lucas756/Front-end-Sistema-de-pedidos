@@ -31,7 +31,7 @@ export default function RecipientItem({ recipients }) {
               onClose();
             } catch ({ response }) {
               toast.error(response.data.error);
-              onClose();
+              onClose(); 
             }
           }}
         />
