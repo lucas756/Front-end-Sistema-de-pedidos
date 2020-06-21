@@ -22,7 +22,7 @@ export default function Recipients() {
 
   async function loadRecipients(page) {
     setLoading(true);
-    const response = await api.get('/recipients', {
+    const response = await api.get('/buscarProdutos', {
       params: {
         name,
         page,
@@ -41,19 +41,10 @@ export default function Recipients() {
   return (
     <Container>
       <Header>
-        <h2>Gerenciando destinatários</h2>
+        <h2>Gerenciando Produtos</h2>
 
         <div>
-          <div>
-            <MdSearch size={16} color="#999" />
-            <input
-              type="text"
-              placeholder="Buscar por Destinatarios"
-              onChange={e => setName(e.target.value)}
-            />
-          </div>
-
-          <button onClick={() => history.push('/recipients/new')} type="button">
+          <button onClick={() => history.push('/produto/novo')} type="button">
             <MdAdd size={22} color="#fff" /> CADASTRAR
           </button>
         </div>
@@ -62,35 +53,34 @@ export default function Recipients() {
       {loading ? (
         <ShimmerLoader />
       ) : (
-        <table>
-          {!recipients.length ? (
-            <EmptyList />
-          ) : (
-            <>
-              <thead>
-                <tr>
-                  <th>
-                    <strong>ID</strong>
-                  </th>
-                  <th>
-                    <strong>Nome</strong>
-                  </th>
-                  <th>
-                    <strong>Endereço</strong>
-                  </th>
-
-                  <th>
-                    <div>
-                      <strong>Ações</strong>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <RecipientItem recipients={recipients} />
-            </>
-          )}
-        </table>
-      )}
+          <table>
+            {!recipients.length ? (
+              <EmptyList />
+            ) : (
+                <>
+                  <thead>
+                    <tr>
+                      <th>
+                        <strong>ID</strong>
+                      </th>
+                      <th>
+                        <strong>Nome</strong>
+                      </th>
+                      <th>
+                        <strong>Valor</strong>
+                      </th>
+                      <th>
+                        <div>
+                          <strong>Ações</strong>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <RecipientItem recipients={recipients} />
+                </>
+              )}
+          </table>
+        )}
       <Pagination loadItems={loadRecipients} itemsLenght={lengthRecipient} />
     </Container>
   );

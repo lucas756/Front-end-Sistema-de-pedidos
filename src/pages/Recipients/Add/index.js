@@ -20,10 +20,11 @@ export default function AddRecipient() {
   });
 
   async function handleSubmit(data) {
+
     try {
-      await api.post('/recipients', data);
+      await api.post('/novoproduto', data);
       toast.success('Recipient registered successful');
-      history.push('/recipients');
+      history.push('/produtos');
     } catch ({ response }) {
       toast.error(response.data.error);
     }

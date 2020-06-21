@@ -46,16 +46,13 @@ export default function RecipientItem({ recipients }) {
           <td>
             <span>#{recipient.id}</span>
           </td>
-
           <td>
-            <span>{recipient.name}</span>
+            <span>{recipient.nome}</span>
           </td>
           <td>
-            <span>
-              {recipient.street}, {recipient.number}, {recipient.city} -{' '}
-              {recipient.region}{' '}
-            </span>
+            <span>{recipient.preco}</span>
           </td>
+          
 
           <td>
             <div>
