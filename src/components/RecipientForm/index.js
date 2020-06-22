@@ -41,56 +41,32 @@ export default function RecipientForm({ title, onSubmit, ...rest }) {
               {loading ? (
                 'Salvando...'
               ) : (
-                <>
-                  <MdCheck size={24} color="#fff" />
-                  <strong>SALVAR</strong>
-                </>
-              )}
+                  <>
+                    <MdCheck size={24} color="#fff" />
+                    <strong>SALVAR</strong>
+                  </>
+                )}
             </Button>
           </div>
         </header>
 
         <Content>
-          <InputContainer>
-            <strong>Nome</strong>
-            <TInput name="name" placeholder="Desinatário exemplo" />
-          </InputContainer>
-
           <main>
-            <InputContainer style={{ flex: 2 }}>
-              <strong>Rua</strong>
-              <TInput name="street" placeholder="Rua exemplo" />
+            <InputContainer>
+              <strong>Nome</strong>
+              <TInput name="name" placeholder="Nome do Produto" />
             </InputContainer>
 
             <InputContainer>
-              <strong>Número</strong>
-              <TInput name="number" placeholder="0000" />
-            </InputContainer>
-
-            <InputContainer>
-              <strong>Complemento</strong>
-              <TInput name="complement" />
+              <strong>Valor</strong>
+              <TInput name="preco" placeholder="Valor do Produto" />
             </InputContainer>
           </main>
 
           <main>
             <InputContainer>
-              <strong>Cidade</strong>
-              <TInput name="city" placeholder="Cidade Exemplo" />
-            </InputContainer>
-
-            <InputContainer>
-              <strong>Estado</strong>
-              <TInput name="region" placeholder="Estado Exemplo" />
-            </InputContainer>
-
-            <InputContainer>
-              <strong>CEP</strong>
-              <MaskInput
-                mask="99999-999"
-                name="zipcode"
-                placeholder="64000-00"
-              />
+              <strong>Descrição</strong>
+              <TInput name="descricao" placeholder="Descrição do Produto" />
             </InputContainer>
           </main>
         </Content>

@@ -29,10 +29,7 @@ export default function NavBar() {
               <Nav to="/deliverymen/new">Clientes</Nav>
             </li>
             <li>
-              <Nav to="/recipients">Destinários</Nav>
-            </li>
-            <li>
-              <Nav to="/problems">Problemas</Nav>
+              <Nav to="/produtos">Produtos</Nav>
             </li>
           </ul>
         </nav>

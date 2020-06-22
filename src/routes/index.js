@@ -34,8 +34,8 @@ export default function Routes() {
       <Route path="/deliverymen/new" exact component={NewDeliveryman} isPrivate />
       <Route path="/deliverymen/edit" component={EditDeliveryman} isPrivate />
 
-      <Route path="/recipients" exact component={Recipients} isPrivate />
-      <Route path="/recipients/new" exact component={NewRecipient} isPrivate />
+      <Route path="/produtos" exact component={Recipients} isPrivate />
+      <Route path="/produto/novo" exact component={NewRecipient} isPrivate />
       <Route path="/recipients/edit" component={EditRecipient} isPrivate />
 
       <Route path="/problems" component={Problems} isPrivate />
