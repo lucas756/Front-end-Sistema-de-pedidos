@@ -47,9 +47,7 @@ export default function OrderForm({ title, onSubmit, ...rest }) {
 
           
 
-          <strong>restaurante</strong>
-          <Input placeholder="Exemplo Entregador" name="restaurante_id" />
-
+    
           <strong>cliente_id</strong>
           <Input placeholder="Exemplo Entregador" name="cliente_id" />
 

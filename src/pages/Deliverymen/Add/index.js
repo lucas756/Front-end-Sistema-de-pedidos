@@ -14,7 +14,6 @@ export default function Add() {
     name: Yup.string().required('o nome é obrigatorio'),
     endereço: Yup.string().required('o endereço é obrigatorio'),
     telefone: Yup.string().required('o telefone é obrigatorio'),
-    restaurante_id: Yup.number().required('O id do restuarante é obrigatorio'),
   });
 
   async function handleSubmit(data) {

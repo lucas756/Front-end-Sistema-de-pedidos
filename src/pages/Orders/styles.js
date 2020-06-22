@@ -51,3 +51,9 @@ export const Modal = styled.div`
     justify-content: center;
   }
 `;
+
+
+export const Text = styled.div`
+  color: #444;
+  font-size: 10px;
+`;

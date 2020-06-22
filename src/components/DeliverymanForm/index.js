@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { CurrencyInput } from 'react';
 import { useSelector } from 'react-redux';
 
 import PropTypes from 'prop-types';
@@ -56,10 +56,7 @@ export default function DeliverymanForm({ title, onSubmit, ...rest }) {
           <strong>telefone</strong>
           <Input placeholder="Exemplo Entregador" name="telefone" />
 
-          <strong>restaurante</strong>
-          <Input placeholder="Exemplo Entregador" name="restaurante_id" />
-    
-    
+
         </Content>
       </Form>
     </Container>
